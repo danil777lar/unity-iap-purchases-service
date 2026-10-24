@@ -1,0 +1,22 @@
+{
+  "name": "com.larje.iap-unity",
+  "version": "0.1.0",
+  "displayName": "Larje Purchases Unity IAP",
+  "description": "Unity IAP 5 (StoreController) provider for Larje Core IPurchasesService: product catalog from PurchasesConfig, localized prices, purchase flow with pending order confirmation, ownership from fetched orders, restore, discount products. Zenject installer replaces the simulated purchases service.",
+  "unity": "6000.3",
+  "author": {
+    "name": "Danil Kolbasenko",
+    "email": "danil777lar@gmail.com",
+    "url": "https://github.com/danil777lar"
+  },
+  "dependencies": {
+    "com.larje.core": "0.1.0"
+  },
+  "keywords": [
+    "larje",
+    "iap",
+    "purchases",
+    "unity-iap",
+    "monetization"
+  ]
+}

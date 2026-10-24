@@ -1,0 +1,26 @@
+{
+    "name": "Larje.Purchases.UnityIap",
+    "rootNamespace": "Larje.Purchases.UnityIap",
+    "references": [
+        "Larje.Core",
+        "UniTask",
+        "Unity.Purchasing"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "LARJE_UNITY_IAP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.purchasing",
+            "expression": "5.0.0",
+            "define": "LARJE_UNITY_IAP"
+        }
+    ],
+    "noEngineReferences": false
+}

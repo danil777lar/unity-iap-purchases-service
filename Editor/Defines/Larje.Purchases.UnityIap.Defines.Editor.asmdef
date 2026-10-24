@@ -1,0 +1,18 @@
+{
+    "name": "Larje.Purchases.UnityIap.Defines.Editor",
+    "rootNamespace": "Larje.Purchases.UnityIap.Editor.Defines",
+    "references": [
+        "Larje.Core.Defines.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

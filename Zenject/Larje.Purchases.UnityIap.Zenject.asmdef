@@ -1,0 +1,33 @@
+{
+    "name": "Larje.Purchases.UnityIap.Zenject",
+    "rootNamespace": "Larje.Purchases.UnityIap.Zenject",
+    "references": [
+        "Larje.Core",
+        "Larje.Core.Zenject",
+        "Larje.Purchases.UnityIap",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "LARJE_ZENJECT",
+        "LARJE_UNITY_IAP"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.larje.zenject",
+            "expression": "9.0.0",
+            "define": "LARJE_ZENJECT"
+        },
+        {
+            "name": "com.unity.purchasing",
+            "expression": "5.0.0",
+            "define": "LARJE_UNITY_IAP"
+        }
+    ],
+    "noEngineReferences": false
+}
