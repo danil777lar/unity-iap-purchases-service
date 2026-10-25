@@ -35,12 +35,12 @@ Instructions for coding agents working on this package.
 - Use UniTask with a `CancellationToken` for loops, delays and async work. Do not use `Update` loops or coroutines in services.
 - Ids are ScriptableObject assets. Persistent data lives in save sections owned by the feature.
 - Zenject code goes only into the `*.Zenject` assembly. It compiles under `LARJE_ZENJECT`, which comes from `versionDefines` on `com.larje.zenject`.
-- Unity AI MCP tools go only into the `*.AI.Editor` assembly. It compiles under `LARJE_UNITY_AI`. Tool names use the `Larje.` prefix and the `larje` group. Put logic that tests need into the regular editor assembly so the tests do not depend on Unity AI.
+- Unity CLI commands (`[CliGroupCommand]` from `com.unity.pipeline`, called with `unity command <group> <name>`) go only into the `*.Cli.Editor` assembly. It references `Unity.Pipeline.Attributes` and compiles under `LARJE_PIPELINE` (a `versionDefines` entry on `com.unity.pipeline`). Groups use the `larje.<area>` prefix (`larje.ids`, `larje.save`), command and parameter names are snake_case, failures are thrown exceptions, and commands that take large JSON also accept `--file`. Put logic that tests need into the regular editor assembly so the tests do not depend on the Pipeline package.
 - Runtime assemblies must not reference editor-only APIs outside `#if UNITY_EDITOR`.
 
 ## Working in a Unity project
 
-- Do not edit `.prefab`, `.unity`, `.asset` or `.mat` files as text. Change them through the Unity Editor or MCP tools.
+- Do not edit `.prefab`, `.unity`, `.asset` or `.mat` files as text. Change them through the Unity Editor: editor scripts, or `unity command` against a running editor.
 - Commit the `.meta` file for every new file and folder. Git packages are immutable, so missing metas break consumers.
 - After every C# change, refresh the editor, wait until compilation is idle, and check that the console has no errors or warnings before moving on.
 - Run EditMode tests through the Test Runner. List the package in the project manifest `testables` first.
